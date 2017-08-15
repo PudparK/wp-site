@@ -1,0 +1,629 @@
+/*
+Theme Name: One Three Two
+Theme URI: http://underscores.me/
+Author: Paul Barron
+Author URI: http://www.132.graphics
+Description: A custom WordPress theme using Bootstrap.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: onethreetwo
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+One Three Two is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+# Theme Specific Specific Styles
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+}
+
+/* Make sure select elements fit in widgets. */
+.widget select {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+	display: inline-block;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33333%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66667%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28571%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11111%;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+/* ----------------------------------------
+					Theme Specific Styles
+---------------------------------------- */
+
+/* === WP STYLES === */
+.logged-in .navbar-fixed-top {
+	top: 32px
+}
+
+
+
+/* === BASE === */
+/* line 3, app/sass/modules/_base.sass */ body { margin-top: 50px; font-size: 16px; background: url("./assets/img/tile.jpg") top left repeat; }
+
+/* line 8, app/sass/modules/_base.sass */ .div-img { padding-top: 50px; }
+
+/* line 11, app/sass/modules/_base.sass */ a:hover { text-decoration: none; }
+
+/* line 14, app/sass/modules/_base.sass */ h1, h2, h3, h4, h5, h6 { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-weight: bold; }
+
+/* line 24, app/sass/modules/_base.sass */ h1 { font-size: 3em; }
+
+/* line 27, app/sass/modules/_base.sass */ h1, h2 { margin: 0 0 40px; }
+
+/* line 31, app/sass/modules/_base.sass */ h3 { margin: 20px 0; }
+
+/* line 34, app/sass/modules/_base.sass */ h4 { font-size: 18px; }
+
+/* line 37, app/sass/modules/_base.sass */ img { max-width: 100%; }
+
+/* line 41, app/sass/modules/_base.sass */ p { margin: 0 0 15px; }
+
+/* line 44, app/sass/modules/_base.sass */ p.lead { font-weight: normal; }
+
+/* line 47, app/sass/modules/_base.sass */ .no-bottom-margin { margin-bottom: 0; }
+
+/* line 50, app/sass/modules/_base.sass */ .strong-text { padding-bottom: 2px; border-bottom: solid 2px #dd5638; }
+
+/* line 54, app/sass/modules/_base.sass */ blockquote { padding: 0; font-style: italic; text-align: left; border: none; }
+
+/* line 59, app/sass/modules/_base.sass */ blockquote:before { display: none; }
+
+/* line 61, app/sass/modules/_base.sass */ blockquote cite { margin: 15px 0 0 0; color: #777; text-align: right; display: block; }
+
+/* line 67, app/sass/modules/_base.sass */ section { margin-top: 50px; padding: 50px 0; }
+
+/* line 70, app/sass/modules/_base.sass */ section h2 { margin: 20px 0 40px; }
+
+/* line 72, app/sass/modules/_base.sass */ section h3 { margin: 30px 0 10px; }
+
+/* line 75, app/sass/modules/_base.sass */ section + section { margin-top: 0; }
+
+/* line 78, app/sass/modules/_base.sass */ section.main-content { margin-top: 0; padding: 0 0; }
+
+/* === BOOTSTRAP ELEMENTS === */
+/* line 83, app/sass/modules/_base.sass */ .row + .row { margin-top: 20px; }
+
+/* line 86, app/sass/modules/_base.sass */ button, input, .btn, a.btn { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; color: white; }
+
+/* line 91, app/sass/modules/_base.sass */ .btn { font-weight: bold; }
+
+/* line 94, app/sass/modules/_base.sass */ .btn-danger { background-color: #dd5638; border-collapse: #d95131; }
+
+/* line 98, app/sass/modules/_base.sass */ .btn-success { background-color: #79b044; border: none; }
+
+/* line 101, app/sass/modules/_base.sass */ .btn-success:hover { background: #6a9b3d; border-color: #6a9b3d; }
+
+/* line 106, app/sass/modules/_base.sass */ body.modal-open { overflow: inherit; padding-right: 0 !important; }
+
+/**** FEATURE-IMAGES ********************/
+/* line 111, app/sass/modules/_base.sass */ #primary { padding-top: 40px; padding-bottom: 40px; }
+
+/* line 115, app/sass/modules/_base.sass */ .feature-image { min-height: 40vh; width: 100%; display: table; margin-top: 0; }
+
+/* line 119, app/sass/modules/_base.sass */ .feature-image h1 { display: table-cell; vertical-align: middle; text-align: center; color: white; }
+
+/* line 125, app/sass/modules/_base.sass */ .feature-image-default { background: url("./assets/img/stuff-feature.jpg") no-repeat; }
+
+/* line 128, app/sass/modules/_base.sass */ .feature-image-default-alt { background: url("./assets/img/hipster-stuff.jpg") no-repeat; background-size: cover; }
+
+/* === HERO === */
+/* line 3, app/sass/modules/_landing_page.sass */ .logo { width: 100%; }
+
+/* line 6, app/sass/modules/_landing_page.sass */ #hero { background: url("./assets/img/hero-bg.jpg") 50% 0 repeat fixed; color: white; margin-top: 0; padding-top: 50px; -webkit-font-smoothing: antialiased; text-rendering: optimizelegibility; }
+
+/* line 13, app/sass/modules/_landing_page.sass */ #hero h1, #hero p { margin-top: 20px; padding-top: 20px; text-align: center; }
+
+/* line 17, app/sass/modules/_landing_page.sass */ #hero .hero-text { margin-top: 30px; }
+
+/* line 19, app/sass/modules/_landing_page.sass */ #hero .hero-text .btn { margin-bottom: 7px; }
+
+/* line 21, app/sass/modules/_landing_page.sass */ .action-buttons { margin: 0 auto !important; }
+
+/* line 23, app/sass/modules/_landing_page.sass */ .action-buttons .action-button { width: 48%; font-size: 1.2em; }
+
+@media screen and (min-width: 768px) and (max-width: 991px) { /* line 23, app/sass/modules/_landing_page.sass */ .action-buttons .action-button { width: 100%; } }
+
+@media screen and (max-width: 568px) { /* line 23, app/sass/modules/_landing_page.sass */ .action-buttons .action-button { width: 100%; } }
+
+/* line 30, app/sass/modules/_landing_page.sass */ .action-buttons .action-button:nth-child(2) { margin-left: 2%; }
+
+@media screen and (min-width: 768px) and (max-width: 991px) { /* line 30, app/sass/modules/_landing_page.sass */ .action-buttons .action-button:nth-child(2) { margin-left: 0; } }
+
+@media screen and (max-width: 568px) { /* line 30, app/sass/modules/_landing_page.sass */ .action-buttons .action-button:nth-child(2) { margin-left: 0; } }
+
+/* line 1, app/sass/modules/_who_benefits.sass */ #who-benefits { background: white; }
+
+/* line 1, app/sass/modules/_nutrition.sass */ #nutrihand.row, #paleo.row, #plantpure.row, #supplements.row { margin-top: 0; padding-top: 50px; padding-bottom: 50px; }
+
+/* line 8, app/sass/modules/_nutrition.sass */ #supplements { background: lightyellow; }
+
+/* line 10, app/sass/modules/_nutrition.sass */ #nutrihand { background: lightblue; }
+
+/* line 12, app/sass/modules/_nutrition.sass */ #paleo { background: lightgreen; }
+
+/* line 14, app/sass/modules/_nutrition.sass */ #plantpure { background: coral; }
+
+/* line 17, app/sass/modules/_nutrition.sass */ #nutrition-row { margin-top: 40px; }
+
+/* line 19, app/sass/modules/_nutrition.sass */ .nutrition-content { min-height: 200px; }
+
+/* line 21, app/sass/modules/_nutrition.sass */ .nutrition-content img { max-width: none; }
+
+/* line 24, app/sass/modules/_nutrition.sass */ .nutrition-box { background: white; padding-top: 40px; padding-bottom: 24px; border: solid 1px #ddd; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
+
+/* line 2, app/sass/modules/_about.sass */ #contact form { padding: 0 0 20px; }
+
+/* line 4, app/sass/modules/_about.sass */ #contact img { margin-top: 50px; }
+
+/* line 1, app/sass/modules/_optin.sass */ #optin { background: #333; margin-top: 0; padding: 20px 0; color: white; font-size: 1.2em; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+/* line 9, app/sass/modules/_optin.sass */ #optin p { margin: 7px 0 0 0; }
+
+@media screen and (min-width: 768px) and (max-width: 991px) { /* line 9, app/sass/modules/_optin.sass */ #optin p { margin: 0 0 10px; } }
+
+@media screen and (min-width: 1200px) { /* line 13, app/sass/modules/_optin.sass */ #optin br { display: none !important; } }
+
+@media screen and (max-width: 1200px) { /* line 16, app/sass/modules/_optin.sass */ #optin button { margin-top: 10px; } }
+
+/* ==== METHODOLOGY ====*/
+/* line 3, app/sass/modules/_methodology.sass */ #methodology { background: coral; }
+
+/* line 5, app/sass/modules/_methodology.sass */ .section-header { text-align: center; }
+
+/* line 1, app/sass/modules/_blog_styles.sass */ .section-header { text-align: center; }
+
+/**** BLOG ********************/
+/* line 5, app/sass/modules/_blog_styles.sass */ .post { position: relative; border: solid 1px #ddd; background: white; margin: 0 0 40px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
+
+/* line 13, app/sass/modules/_blog_styles.sass */ .post header, .post .post-excerpt, .post .post-body { padding: 20px; }
+
+/* line 18, app/sass/modules/_blog_styles.sass */ .post header h1, .post header h3 { margin: 0 0 15px; padding: 0 0 15px; border-bottom: solid 1px #ddd; }
+
+/* line 23, app/sass/modules/_blog_styles.sass */ .post header h1 { font-size: 24px; }
+
+/* line 25, app/sass/modules/_blog_styles.sass */ .post .post-image { height: auto; }
+
+/* line 27, app/sass/modules/_blog_styles.sass */ .post .post-details { font-size: 12px; width: 90%; }
+
+/* line 30, app/sass/modules/_blog_styles.sass */ .post .post-details i.fa { padding-left: 10px; }
+
+/* line 32, app/sass/modules/_blog_styles.sass */ .post .post-details i.fa:first-child { padding: 0; }
+
+/**** COMMENTS ********************/
+/* line 36, app/sass/modules/_blog_styles.sass */ .post-comments-badge { height: 70px; width: 70px; position: absolute; top: 25px; right: 20px; border: none; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; background: #79b044; text-align: center; display: table; }
+
+/* line 49, app/sass/modules/_blog_styles.sass */ .post-comments-badge:hover { background: red; }
+
+/* line 51, app/sass/modules/_blog_styles.sass */ .post-comments-badge a { display: table-cell; vertical-align: middle; color: white; font-size: 20px; line-height: 20px; }
+
+/* line 57, app/sass/modules/_blog_styles.sass */ .post-comments-badge i.fa { display: block; font-size: 15px; padding: 0; margin-bottom: 4px; }
+
+/**** COMMENTS ********************/
+/* line 64, app/sass/modules/_blog_styles.sass */ #comments { position: relative; border: solid 1px #ddd; padding: 20px; background: white; margin: 0 0 40px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
+
+/* line 73, app/sass/modules/_blog_styles.sass */ #comments .comments-wrap { padding: 20px; }
+
+/* line 75, app/sass/modules/_blog_styles.sass */ #comments h3 { text-align: center; }
+
+/* line 77, app/sass/modules/_blog_styles.sass */ #comments h4 { font-size: 1.3em; }
+
+/* line 79, app/sass/modules/_blog_styles.sass */ #comments ol { list-style: none; margin: 0; padding: 0; }
+
+/* line 83, app/sass/modules/_blog_styles.sass */ #comments ol li { background: rgba(0, 0, 0, 0.02); padding: 10px 20px; margin: 10px 0; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; border: solid 1px rgba(0, 0, 0, 0.03); }
+
+/* line 91, app/sass/modules/_blog_styles.sass */ #comments ol li ol.children { padding: 0; list-style: none; font-size: 0.96em; }
+
+/* line 95, app/sass/modules/_blog_styles.sass */ #comments #leave-comment { margin: 40px 0 0; padding: 20px 0 0; border-top: solid 1px #eee; }
+
+/**** WIDGETS ********************/
+/* line 2, app/sass/modules/_widgets.sass */ .widget { position: relative; border: solid 1px #ddd; padding: 20px; background: white; margin: 0 0 40px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
+
+/* line 11, app/sass/modules/_widgets.sass */ .widget button { white-space: normal; }
+
+/* line 13, app/sass/modules/_widgets.sass */ .widget h4 { margin: 0 0 10px; padding: 0 0 10px; border-bottom: solid 1px #ddd; }
+
+/* line 17, app/sass/modules/_widgets.sass */ .widget ul { list-style: none; margin: 0; padding: 0; }
+
+/* line 21, app/sass/modules/_widgets.sass */ .widget ul li { margin: 0 0 5px; }
+
+/* line 23, app/sass/modules/_widgets.sass */ .widget ul li:hover { position: relative; left: 1px; }
+
+/**** FORMS ********************/
+/* line 2, app/sass/modules/_forms.sass */ label { display: block; font-weight: bold; }
+
+/* line 6, app/sass/modules/_forms.sass */ input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], textarea { color: #666; width: 100%; padding: 6px 12px; display: block; border: 1px solid #ccc; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+/* line 24, app/sass/modules/_forms.sass */ input[type="submit"], button[type="submit"] { background: #999; display: inline-block; margin-bottom: 0; font-size: 18px; font-weight: bold; line-height: 1.33; text-align: center; white-space: nowrap; vertical-align: middle; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; border: none; background-image: none; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px; outline: none; }
+
+/* line 46, app/sass/modules/_forms.sass */ input[type="submit"]:hover, button[type="submit"]:hover { outline: none; border: none; background: #aaa; }
+
+/* line 6, app/sass/modules/_expectations.sass */ #expectations .container ul.bulleted-list { margin: 0 auto; padding-left: 0; display: table; list-style: none; }
+
+/* line 11, app/sass/modules/_expectations.sass */ #expectations .container ul.bulleted-list .list-group-item { background: white; }
+
+/* line 13, app/sass/modules/_expectations.sass */ #expectations .container ul.bulleted-list li { padding: 20px 50px; text-align: justify; font-size: 1.4em; }
+
+/* line 17, app/sass/modules/_expectations.sass */ #expectations .container ul.bulleted-list li i { vertical-align: middle; color: green; font-size: 1.6em; }
+
+/* line 1, app/sass/modules/_testimonials.sass */ #testimonials { background: #333; color: white; text-align: center; }
+
+/* line 5, app/sass/modules/_testimonials.sass */ #testimonials .testimonial { margin-bottom: 20px; }
+
+/* line 7, app/sass/modules/_testimonials.sass */ #testimonials .testimonial .material-icons { -webkit-transform: rotate(180deg); }
+
+/* line 1, app/sass/modules/_services.sass */ #services-offered { background: #3e4249; color: white; text-align: center; }
+
+/* line 1, app/sass/modules/_survey.sass */ #survey { background: url("./assets/img/hipster-stuff.jpg") center center repeat fixed; background-size: cover; color: white; margin-top: 0; padding: 140px 0; text-align: center; }
+
+/* line 8, app/sass/modules/_survey.sass */ #survey .btn { font-size: 24px; }
+
+/* line 10, app/sass/modules/_survey.sass */ #survey h2 { font-weight: normal; }
+
+/* line 12, app/sass/modules/_survey.sass */ #survey h2 strong { border-bottom: solid 2px #dd5638; }
+
+/* line 1, app/sass/modules/_footer.sass */ footer { background-color: #333; color: white; min-height: 400px; }
+
+/* line 5, app/sass/modules/_footer.sass */ footer .social-icons { text-align: center; margin-top: 50px; padding: 0; list-style-type: none; }
+
+/* line 10, app/sass/modules/_footer.sass */ footer .social-icons li { margin-right: 10px; display: inline; text-align: center; }
+
+/* line 14, app/sass/modules/_footer.sass */ footer .social-icons li i { font-size: 2em; }
+
+/* line 16, app/sass/modules/_footer.sass */ footer .address { margin: 0; padding: 0; list-style-type: none; text-align: center; }
+
+/* line 21, app/sass/modules/_footer.sass */ footer .address li { display: block; text-align: center; }
+
+/**** Resources ********************/
+/* line 2, app/sass/modules/_resources.sass */ section.main-content { margin-top: 0; padding: 0 0; }
+
+/* line 6, app/sass/modules/_resources.sass */ .resource { width: 31.33333333%; float: left; margin: 0 3% 40px 0; }
+
+@media screen and (max-width: 768px) { /* line 6, app/sass/modules/_resources.sass */ .resource { width: 48%; margin-right: 2%; min-height: 800px; } }
+
+@media screen and (max-width: 568px) { /* line 6, app/sass/modules/_resources.sass */ .resource { width: 100%; margin-right: 0; min-height: 0; } }
+
+/* line 18, app/sass/modules/_resources.sass */ .resource:nth-child(3n) { margin-right: 0; }
+
+/* ----------------------------------------
+					MEDIA QUERIES
+---------------------------------------- */
+@media screen and (max-width: 782px) {
+	.logged-in .navbar-fixed-top {
+		top: 46px
+	}
+
+}
