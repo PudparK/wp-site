@@ -9,17 +9,20 @@
  * @package One_Three_Two
  */
 
+ $assessment = 'health-assessment';
+
 ?>
 
 <?php wp_footer(); ?>
     <!-- SURVEY
-    =========================================================== -->
+		=========================================================== -->
+
     <section id="survey" data-type="background" data-speed="10">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-8 col-sm-offset-2">
 						<h2>Take the First Step Towards <strong class="strong-text">Nutritional Health</strong>!</h2>
-						<p><a href="#" class="btn btn-lg btn-block btn-success">Assess Your Health</a></p>
+						<p><a href="<?php echo $assessment; ?>" class="btn btn-lg btn-block btn-success">Assess Your Health</a></p>
 					</div>
 				</div><!-- row -->
 			</div><!-- container -->

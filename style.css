@@ -627,3 +627,30 @@ object {
 	}
 
 }
+
+/* ----------------------------------------
+					CUSTOM FORMS 7
+---------------------------------------- */
+
+span.wpcf7-list-item { display: block !important; }
+
+input[type=number] {
+	color: #666;
+	width: 100%;
+	padding: 6px 12px;
+	display: block;
+	border: 1px solid #ccc;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* ----------------------------------------
+					HIDE SURVEY
+---------------------------------------- */
+.page-id-194 #survey {
+	display: none;
+}

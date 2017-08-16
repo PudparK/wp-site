@@ -1,0 +1,120 @@
+<div class="row">
+	<div class="col-sm-12">
+		<div class="form-group">
+			<label class="control-label requiredField" for="your-name">Name</label>
+			[text* your-name class:form-control class:input-lg id:your-name placeholder "Your name"]
+		</div>
+	</div>
+
+	<div class="col-sm-6">
+		<div class="form-group">
+			<label class="control-label requiredField" for="your-email">Email</label>
+			[email* your-email class:form-control class:input-lg id:your-email placeholder "Your email"]		
+		</div>
+	</div>
+
+	<div class="col-sm-6">
+		<div class="form-group">
+			<label class="control-label " for="phone">Phone</label>
+			[tel phone id:phone class:form-control class:input-lg placeholder "(555) 555-5555"]
+		</div>
+	</div>
+
+	<div class="col-sm-6">
+		<div class="form-group">
+			<label class="control-label " for="height">What's your current height (lbs.)?</label>
+			[number height id:height class:input-lg]
+		</div>
+	</div>
+
+	<div class="col-sm-6">
+		<div class="form-group">
+			<label class="control-label " for="weight">What's your current weight (lbs.)?</label>
+			[number weight id:weight class:input-lg]
+		</div>
+	</div>
+
+	<div class="col-sm-12">
+		<div class="form-group">
+			<label class="control-label requiredField">How can we help?</label>
+		</div>
+			[radio reason id:reason default:1 "Overall Health" "Weight Loss" "Athletic Performance"]
+	</div>
+
+	<div class="col-sm-12">
+		<div class="form-group">
+			<label class="control-label ">How many meals do you eat per day?</label>
+		</div>
+			[radio meals id:meals default:1 "1 - 3" "4 - 6" "6+"]
+	</div>	
+
+	<div class="col-sm-12">
+		<div class="form-group">
+			<label class="control-label ">What types of food do you typically crave?</label>
+		</div>
+			[checkbox* cravings id:cravings "Sweets/Desserts" "Chocolate" "Bread/Pasta" "Fried Foods/ Salty Foods" "Dairy" "Meats" "Alcoholic Beverages" "Other"]
+	</div>
+
+	<div class="col-sm-12">
+		<div class="form-group">
+			<label class="control-label requiredField">Do you experience any of the following if you haven&rsquo;t eaten in a while?</label>
+		</div>
+			[checkbox* experience id:experience "Irritability" "Lightheaded" "Third Choice" "Weakness" "Other"]
+	</div>
+
+	<div class="col-sm-12">
+		<div class="form-group">
+			<label class="control-label requiredField">How often do you eat at home/cook your own meals?</label>
+		</div>
+			[radio cook id:cook default:1 "Never" "Rarely" "Sometimes" "Often" "Very Often"]
+	</div>
+
+	<div class="col-sm-12">
+		<div class="form-group">
+			<label class="control-label requiredField">How would rate your energy level?</label>
+		</div>
+			[radio energy id:energy default:1 "Low" "Moderate" "High"]
+	</div>
+
+	<div class="col-sm-12">
+		<div class="form-group">
+			<label class="control-label requiredField">How would you rate your quality of sleep?</label>
+		</div>
+			[radio sleep id:sleep default:1 "Poor" "Fair" "Average" "Good"]
+	</div>
+
+	<div class="col-sm-12">
+		<div class="form-group">
+			<label class="control-label requiredField">How many times a week do you exercise?</label>
+		</div>
+			[radio exercise id:exercise default:1 "0" "1 - 3" "3 - 6" "7"]
+	</div>
+
+	<div class="col-sm-12">
+		<div class="form-group">
+			<label class="control-label ">What weight loss/fitness/lifestyle programs have you tried in the past?</label>
+		</div>
+			[checkbox programs id:programs "Commercial Diet (i.e. Atkins, South Beach, Paleo, Low Carb, etc.)" "Weight loss consultant (i.e. Jenny Craig, Weight Watchers, Nutrisystem, etc.)" "Exercise on your own" "Personal Trainer" "Diet on your own" "Nutritionist" "Doctor" "Bariatric Surgery" "Other"]
+	</div>
+
+	<div class="col-sm-12">
+		<div class="form-group">
+			<label class="control-label requiredField">Diagnosed Medical Conditions</label>
+		</div>
+			[checkbox* conditions id:conditions "Diabetes" "High Blood Pressure" "High Cholesterol" "Obesity" "Kidney Related Issues" "Heart Disease" "Cancer" "Thyroid" "GI Problems" "Immune Disorders" "Other"]
+	</div>
+
+	<div class="col-sm-12">
+		<div class="form-group">
+			<label class="control-label requiredField" for="intake">List all medications, supplements, vitamins, or herbs you are currently taking.</label>
+			[textarea* intake x3 id:intake]
+		</div>
+	</div>
+
+	<div class="col-sm-12">
+		<div class="form-group">
+			<label class="control-label " for="extra">Is there anything else you would like to share with your Certified Nutritionist?</label>
+			[textarea extra id:extra x3 class:form-control class:input-lg]		
+		</div>
+	</div>	
+</div>
