@@ -107,8 +107,8 @@ function onethreetwo_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'onethreetwo' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 }
 add_action( 'widgets_init', 'onethreetwo_widgets_init' );
@@ -189,3 +189,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	function my_theme_wrapper_end() {
 		echo '</section>';
 	}
+
+
+	// Replaces the excerpt "more" text by a link.$_COOKIE
+	function new_excerpt_more($more) {
+		global $post;
+		return '... <a class"moretag" href="' . get_permalink($post->ID) . '"> continue reading &raquo;</a>';
+	}
+add_filter('excerpt_more', 'new_excerpt_more');

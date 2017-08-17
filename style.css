@@ -515,7 +515,7 @@ object {
 
 /* line 23, app/sass/modules/_blog_styles.sass */ .post header h1 { font-size: 24px; }
 
-/* line 25, app/sass/modules/_blog_styles.sass */ .post .post-image { height: auto; }
+/* line 25, app/sass/modules/_blog_styles.sass */ .post .post-image img { height: auto; }
 
 /* line 27, app/sass/modules/_blog_styles.sass */ .post .post-details { font-size: 12px; width: 90%; }
 
@@ -548,6 +548,19 @@ object {
 /* line 91, app/sass/modules/_blog_styles.sass */ #comments ol li ol.children { padding: 0; list-style: none; font-size: 0.96em; }
 
 /* line 95, app/sass/modules/_blog_styles.sass */ #comments #leave-comment { margin: 40px 0 0; padding: 20px 0 0; border-top: solid 1px #eee; }
+
+#comments footer {
+	background: none;
+	color: inherit;
+}
+
+#comments footer a {
+	color: inherit;
+}
+
+#comments .comment-metadata {
+	margin: 10px 0 0;
+}
 
 /**** WIDGETS ********************/
 /* line 2, app/sass/modules/_widgets.sass */ .widget { position: relative; border: solid 1px #ddd; padding: 20px; background: white; margin: 0 0 40px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
@@ -595,7 +608,7 @@ object {
 
 /* line 12, app/sass/modules/_survey.sass */ #survey h2 strong { border-bottom: solid 2px #dd5638; }
 
-/* line 1, app/sass/modules/_footer.sass */ footer { background-color: #333; color: white; min-height: 400px; }
+/* line 1, app/sass/modules/_footer.sass */ footer { background-color: #333; color: white; }
 
 /* line 5, app/sass/modules/_footer.sass */ footer .social-icons { text-align: center; margin-top: 50px; padding: 0; list-style-type: none; }
 
