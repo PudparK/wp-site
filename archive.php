@@ -1,27 +1,30 @@
 <?php
 /**
- * The template for displaying archive pages
+ * The template for displaying archive pages.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package One_Three_Two
+ * @package Bootstrap_to_WordPress
  */
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+
 
 		<?php
-		if ( have_posts() ) : ?>
+ if ( have_posts() ) : ?>
+ <section class="feature-image feature-image-default-alt" data-type="background" data-speed="3">
+	 <div class="overlayed">
+		<?php
+		the_archive_title( '<h1 class="page-title">','');
+		the_archive_description( '<small class="taxonomy-description">', '</small> </h1>' );
+		?>
+	 </div>
+ </section>
 
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
-
+			<div class="container">
+				<div class="row" id="primary">
+					<main id="content" class="col-sm-8">
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
@@ -44,8 +47,14 @@ get_header(); ?>
 		endif; ?>
 
 		</main><!-- #main -->
+
+		<aside class="col-sm-4">
+			<?php get_sidebar(); ?>
+		</aside>
+
 	</div><!-- #primary -->
+</div>
+
 
 <?php
-get_sidebar();
 get_footer();

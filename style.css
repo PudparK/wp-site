@@ -382,6 +382,9 @@ object {
 
 /* line 24, app/sass/modules/_base.sass */ h1 { font-size: 3em; }
 
+.overlayed h1 small { color: white; }
+.overlayed h1 { display: table-cell; }
+
 /* line 27, app/sass/modules/_base.sass */ h1, h2 { margin: 0 0 40px; }
 
 /* line 31, app/sass/modules/_base.sass */ h3 { margin: 20px 0; }
@@ -665,5 +668,21 @@ input[type=number] {
 					HIDE SURVEY
 ---------------------------------------- */
 .page-id-194 #survey {
+	display: none;
+}
+
+.overlayed {
+	background: rgba(0,0,0,0.6);
+	width: 50%;
+	margin: 50px 25%;
+	padding-top: 20px;
+	text-align: center;
+	display: table;
+}
+
+.form-group label {
+	margin-bottom: 10px;
+}
+.form-group br {
 	display: none;
 }
