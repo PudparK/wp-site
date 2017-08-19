@@ -1,10 +1,10 @@
-jQuery(function() {
-	console.log("jQuery is working...");
+$(function() {
+	console.log("jQuery working...");
 	// Cache the window object
-	var $window = jQuery(window);
+	var $window = $(window);
 
 	// Parallax background effect
-	jQuery('section[data-type="background"]').each(function(){
+	$('section[data-type="background"]').each(function(){
 		var $bgObj = $(this);
 
 		$window.scroll(function() {
@@ -22,3 +22,20 @@ jQuery(function() {
 		});
 	});
 });
+
+function openCompany(evt, companyName) {
+	var i, tabcontent, tablinks;
+	tabcontent = document.getElementsByClassName("tabcontent");
+	for(i = 0; i < tabcontent.length; i++) {
+		tabcontent[i].style.display = "none";
+	}
+
+	tablinks = document.getElementsByClassName("tablinks");
+	for(i = 0; i < tablinks.length; i++) {
+		tablinks[i].className = tablinks[i].className.replace(" active", "");
+	}
+
+	document.getElementById(companyName).style.display = "block";
+
+	evt.currentTarget.className += " active";
+}
