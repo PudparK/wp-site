@@ -369,9 +369,7 @@ object {
 	top: 32px
 }
 
-/* ----------------------------------------
-					Custom Styles Begins
----------------------------------------- */
+
 
 /* === BASE === */
 /* line 3, app/sass/modules/_base.sass */ body { margin-top: 50px; font-size: 16px; background: url("./assets/img/tile.jpg") top left repeat; }
@@ -384,70 +382,71 @@ object {
 
 /* line 24, app/sass/modules/_base.sass */ h1 { font-size: 3em; }
 
-/* line 26, app/sass/modules/_base.sass */ h1 small { color: white; }
+.overlayed h1 small { color: white; }
+.overlayed h1 { display: table-cell; }
 
-/* line 29, app/sass/modules/_base.sass */ h1, h2 { margin: 0 0 40px; }
+/* line 27, app/sass/modules/_base.sass */ h1, h2 { margin: 0 0 40px; }
 
-/* line 33, app/sass/modules/_base.sass */ h3 { margin: 20px 0; }
+/* line 31, app/sass/modules/_base.sass */ h3 { margin: 20px 0; }
 
-/* line 36, app/sass/modules/_base.sass */ h4 { font-size: 18px; }
+/* line 34, app/sass/modules/_base.sass */ h4 { font-size: 18px; }
 
-/* line 39, app/sass/modules/_base.sass */ img { max-width: 100%; }
+/* line 37, app/sass/modules/_base.sass */ img { max-width: 100%; }
 
-/* line 43, app/sass/modules/_base.sass */ p { margin: 0 0 15px; }
+/* line 41, app/sass/modules/_base.sass */ p { margin: 0 0 15px; }
 
-/* line 46, app/sass/modules/_base.sass */ p.lead { font-weight: normal; }
+/* line 44, app/sass/modules/_base.sass */ p.lead { font-weight: normal; }
 
-/* line 49, app/sass/modules/_base.sass */ .no-bottom-margin { margin-bottom: 0; }
+/* line 47, app/sass/modules/_base.sass */ .no-bottom-margin { margin-bottom: 0; }
 
-/* line 52, app/sass/modules/_base.sass */ .strong-text { padding-bottom: 2px; border-bottom: solid 2px #dd5638; }
+/* line 50, app/sass/modules/_base.sass */ .strong-text { padding-bottom: 2px; border-bottom: solid 2px #dd5638; }
 
-/* line 56, app/sass/modules/_base.sass */ blockquote { padding: 0; font-style: italic; text-align: left; border: none; }
+/* line 54, app/sass/modules/_base.sass */ blockquote { padding: 0; font-style: italic; text-align: left; border: none; }
 
-/* line 61, app/sass/modules/_base.sass */ blockquote:before { display: none; }
+/* line 59, app/sass/modules/_base.sass */ blockquote:before { display: none; }
 
-/* line 63, app/sass/modules/_base.sass */ blockquote cite { margin: 15px 0 0 0; color: #777; text-align: right; display: block; }
+/* line 61, app/sass/modules/_base.sass */ blockquote cite { margin: 15px 0 0 0; color: #777; text-align: right; display: block; }
 
-/* line 69, app/sass/modules/_base.sass */ section { margin-top: 50px; padding: 50px 0; }
+/* line 67, app/sass/modules/_base.sass */ section { margin-top: 50px; padding: 50px 0; }
 
-/* line 72, app/sass/modules/_base.sass */ section h2 { margin: 20px 0 40px; }
+/* line 70, app/sass/modules/_base.sass */ section h2 { margin: 20px 0 40px; }
 
-/* line 74, app/sass/modules/_base.sass */ section h3 { margin: 30px 0 10px; }
+/* line 72, app/sass/modules/_base.sass */ section h3 { margin: 30px 0 10px; }
 
-/* line 77, app/sass/modules/_base.sass */ section + section { margin-top: 0; }
+/* line 75, app/sass/modules/_base.sass */ section + section { margin-top: 0; }
 
-/* line 80, app/sass/modules/_base.sass */ section.main-content { margin-top: 0; padding: 0 0; }
+/* line 78, app/sass/modules/_base.sass */ section.main-content { margin-top: 0; padding: 0 0; }
 
 /* === BOOTSTRAP ELEMENTS === */
-/* line 85, app/sass/modules/_base.sass */ .row + .row { margin-top: 20px; }
+/* line 83, app/sass/modules/_base.sass */ .row + .row { margin-top: 20px; }
 
-/* line 88, app/sass/modules/_base.sass */ button, input, .btn, a.btn { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; color: white; }
+/* line 86, app/sass/modules/_base.sass */ button, input, .btn, a.btn { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; color: white; }
 
-/* line 93, app/sass/modules/_base.sass */ .btn { font-weight: bold; }
+/* line 91, app/sass/modules/_base.sass */ .btn { font-weight: bold; }
 
-/* line 96, app/sass/modules/_base.sass */ .btn-danger { background-color: #dd5638; border-collapse: #d95131; }
+/* line 94, app/sass/modules/_base.sass */ .btn-danger { background-color: #dd5638; border-collapse: #d95131; }
 
-/* line 100, app/sass/modules/_base.sass */ .btn-success { background-color: #79b044; border: none; }
+/* line 98, app/sass/modules/_base.sass */ .btn-success { background-color: #79b044; border: none; }
 
-/* line 103, app/sass/modules/_base.sass */ .btn-success:hover { background: #6a9b3d; border-color: #6a9b3d; }
+/* line 101, app/sass/modules/_base.sass */ .btn-success:hover { background: #6a9b3d; border-color: #6a9b3d; }
 
-/* line 108, app/sass/modules/_base.sass */ body.modal-open { overflow: inherit; padding-right: 0 !important; }
+/* line 106, app/sass/modules/_base.sass */ body.modal-open { overflow: inherit; padding-right: 0 !important; }
 
 /**** FEATURE-IMAGES ********************/
-/* line 113, app/sass/modules/_base.sass */ #primary { padding-top: 40px; padding-bottom: 40px; }
+/* line 111, app/sass/modules/_base.sass */ #primary { padding-top: 40px; padding-bottom: 40px; }
 
-/* line 117, app/sass/modules/_base.sass */ .feature-image { min-height: 40vh; width: 100%; display: table; }
+/* line 115, app/sass/modules/_base.sass */ .feature-image { min-height: 40vh; width: 100%; display: table; margin-top: 0; }
 
-/* line 121, app/sass/modules/_base.sass */ .feature-image h1 { display: table-cell; vertical-align: middle; text-align: center; color: white; }
+/* line 119, app/sass/modules/_base.sass */ .feature-image h1 { display: table-cell; vertical-align: middle; text-align: center; color: white; }
 
-/* line 127, app/sass/modules/_base.sass */ .feature-image-default { background: url("./assets/img/stuff-feature.jpg") no-repeat; }
+/* line 125, app/sass/modules/_base.sass */ .feature-image-default { background: url("./assets/img/stuff-feature.jpg") no-repeat; }
 
-/* line 130, app/sass/modules/_base.sass */ .feature-image-default-alt { background: url("./assets/img/hipster-stuff.jpg") no-repeat; background-size: cover; }
+/* line 128, app/sass/modules/_base.sass */ .feature-image-default-alt { background: url("./assets/img/hipster-stuff.jpg") no-repeat; background-size: cover; }
 
 /* === HERO === */
 /* line 3, app/sass/modules/_landing_page.sass */ .logo { width: 100%; }
 
-/* line 6, app/sass/modules/_landing_page.sass */ #hero { background: url("./assets/img/hero-bg.jpg") 50% 0 repeat fixed; color: white; margin-top: 50px; padding-top: 50px; -webkit-font-smoothing: antialiased; text-rendering: optimizelegibility; }
+/* line 6, app/sass/modules/_landing_page.sass */ #hero { background: url("./assets/img/hero-bg.jpg") 50% 0 repeat fixed; color: white; margin-top: 0; padding-top: 50px; -webkit-font-smoothing: antialiased; text-rendering: optimizelegibility; }
 
 /* line 13, app/sass/modules/_landing_page.sass */ #hero h1, #hero p { margin-top: 20px; padding-top: 20px; text-align: center; }
 
@@ -489,16 +488,6 @@ object {
 
 /* line 24, app/sass/modules/_nutrition.sass */ .nutrition-box { background: white; padding-top: 40px; padding-bottom: 24px; border: solid 1px #ddd; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
 
-/* line 33, app/sass/modules/_nutrition.sass */ div.tab { overflow: hidden; border: 1px solid #ccc; background-color: #f1f1f1; }
-
-/* line 38, app/sass/modules/_nutrition.sass */ div.tab button { background-color: inherit; float: left; border: none; outline: none; cursor: pointer; padding: 14px 16px; transition: 0.3s; }
-
-/* line 46, app/sass/modules/_nutrition.sass */ div.tab button:hover { background-color: #ddd; }
-
-/* line 49, app/sass/modules/_nutrition.sass */ div.tab button.active { background-color: #ccc; }
-
-/* line 52, app/sass/modules/_nutrition.sass */ .tabcontent { display: none; padding: 6px 12px; border: 1px solid #ccc; border-top: none; }
-
 /* line 2, app/sass/modules/_about.sass */ #contact form { padding: 0 0 20px; }
 
 /* line 4, app/sass/modules/_about.sass */ #contact img { margin-top: 50px; }
@@ -529,52 +518,52 @@ object {
 
 /* line 23, app/sass/modules/_blog_styles.sass */ .post header h1 { font-size: 24px; }
 
-/* line 26, app/sass/modules/_blog_styles.sass */ .post .post-image img { height: auto; }
+/* line 25, app/sass/modules/_blog_styles.sass */ .post .post-image img { height: auto; }
 
-/* line 28, app/sass/modules/_blog_styles.sass */ .post .post-details { font-size: 12px; width: 90%; }
+/* line 27, app/sass/modules/_blog_styles.sass */ .post .post-details { font-size: 12px; width: 90%; }
 
-/* line 31, app/sass/modules/_blog_styles.sass */ .post .post-details i.fa { padding-left: 10px; }
+/* line 30, app/sass/modules/_blog_styles.sass */ .post .post-details i.fa { padding-left: 10px; }
 
-/* line 33, app/sass/modules/_blog_styles.sass */ .post .post-details i.fa:first-child { padding: 0; }
-
-/**** COMMENTS ********************/
-/* line 37, app/sass/modules/_blog_styles.sass */ .post-comments-badge { height: 70px; width: 70px; position: absolute; top: 25px; right: 20px; border: none; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; background: #79b044; text-align: center; display: table; }
-
-/* line 50, app/sass/modules/_blog_styles.sass */ .post-comments-badge:hover { background: red; }
-
-/* line 52, app/sass/modules/_blog_styles.sass */ .post-comments-badge a { display: table-cell; vertical-align: middle; color: white; font-size: 20px; line-height: 20px; }
-
-/* line 58, app/sass/modules/_blog_styles.sass */ .post-comments-badge i.fa { display: block; font-size: 15px; padding: 0; margin-bottom: 4px; }
+/* line 32, app/sass/modules/_blog_styles.sass */ .post .post-details i.fa:first-child { padding: 0; }
 
 /**** COMMENTS ********************/
-/* line 65, app/sass/modules/_blog_styles.sass */ #comments { position: relative; border: solid 1px #ddd; padding: 20px; background: white; margin: 0 0 40px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
+/* line 36, app/sass/modules/_blog_styles.sass */ .post-comments-badge { height: 70px; width: 70px; position: absolute; top: 25px; right: 20px; border: none; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; background: #79b044; text-align: center; display: table; }
 
-/* line 74, app/sass/modules/_blog_styles.sass */ #comments .comments-wrap { padding: 20px; }
+/* line 49, app/sass/modules/_blog_styles.sass */ .post-comments-badge:hover { background: red; }
 
-/* line 76, app/sass/modules/_blog_styles.sass */ #comments h3 { text-align: center; }
+/* line 51, app/sass/modules/_blog_styles.sass */ .post-comments-badge a { display: table-cell; vertical-align: middle; color: white; font-size: 20px; line-height: 20px; }
 
-/* line 78, app/sass/modules/_blog_styles.sass */ #comments h4 { font-size: 1.3em; }
+/* line 57, app/sass/modules/_blog_styles.sass */ .post-comments-badge i.fa { display: block; font-size: 15px; padding: 0; margin-bottom: 4px; }
 
-/* line 80, app/sass/modules/_blog_styles.sass */ #comments ol { list-style: none; margin: 0; padding: 0; }
+/**** COMMENTS ********************/
+/* line 64, app/sass/modules/_blog_styles.sass */ #comments { position: relative; border: solid 1px #ddd; padding: 20px; background: white; margin: 0 0 40px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
 
-/* line 84, app/sass/modules/_blog_styles.sass */ #comments ol li { background: rgba(0, 0, 0, 0.02); padding: 10px 20px; margin: 10px 0; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; border: solid 1px rgba(0, 0, 0, 0.03); }
+/* line 73, app/sass/modules/_blog_styles.sass */ #comments .comments-wrap { padding: 20px; }
 
-/* line 92, app/sass/modules/_blog_styles.sass */ #comments ol li ol.children { padding: 0; list-style: none; font-size: 0.96em; }
+/* line 75, app/sass/modules/_blog_styles.sass */ #comments h3 { text-align: center; }
 
-/* line 96, app/sass/modules/_blog_styles.sass */ #comments #leave-comment { margin: 40px 0 0; padding: 20px 0 0; border-top: solid 1px #eee; }
+/* line 77, app/sass/modules/_blog_styles.sass */ #comments h4 { font-size: 1.3em; }
 
-/* SPECIFIC WORDPRESS COMMENT STYLES */
-/* line 102, app/sass/modules/_blog_styles.sass */ #comments footer { background: none; color: inherit; }
+/* line 79, app/sass/modules/_blog_styles.sass */ #comments ol { list-style: none; margin: 0; padding: 0; }
 
-/* line 105, app/sass/modules/_blog_styles.sass */ #comments footer a { color: inherit; }
+/* line 83, app/sass/modules/_blog_styles.sass */ #comments ol li { background: rgba(0, 0, 0, 0.02); padding: 10px 20px; margin: 10px 0; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; border: solid 1px rgba(0, 0, 0, 0.03); }
 
-/* line 107, app/sass/modules/_blog_styles.sass */ #comments footer .comment-metadata { margin: 10px 0 0; }
+/* line 91, app/sass/modules/_blog_styles.sass */ #comments ol li ol.children { padding: 0; list-style: none; font-size: 0.96em; }
 
-/* line 110, app/sass/modules/_blog_styles.sass */ .overlayed h1 small { color: white; }
+/* line 95, app/sass/modules/_blog_styles.sass */ #comments #leave-comment { margin: 40px 0 0; padding: 20px 0 0; border-top: solid 1px #eee; }
 
-/* line 112, app/sass/modules/_blog_styles.sass */ .overlayed h1 { display: table-cell; }
+#comments footer {
+	background: none;
+	color: inherit;
+}
 
-/* line 115, app/sass/modules/_blog_styles.sass */ .overlayed { background: rgba(0, 0, 0, 0.6); width: 80%; margin: 50px 10%; padding: 20px; }
+#comments footer a {
+	color: inherit;
+}
+
+#comments .comment-metadata {
+	margin: 10px 0 0;
+}
 
 /**** WIDGETS ********************/
 /* line 2, app/sass/modules/_widgets.sass */ .widget { position: relative; border: solid 1px #ddd; padding: 20px; background: white; margin: 0 0 40px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
@@ -624,15 +613,15 @@ object {
 
 /* line 1, app/sass/modules/_footer.sass */ footer { background-color: #333; color: white; }
 
-/* line 4, app/sass/modules/_footer.sass */ footer .social-icons { text-align: center; margin-top: 50px; padding: 0; list-style-type: none; }
+/* line 5, app/sass/modules/_footer.sass */ footer .social-icons { text-align: center; margin-top: 50px; padding: 0; list-style-type: none; }
 
-/* line 9, app/sass/modules/_footer.sass */ footer .social-icons li { margin-right: 10px; display: inline; text-align: center; }
+/* line 10, app/sass/modules/_footer.sass */ footer .social-icons li { margin-right: 10px; display: inline; text-align: center; }
 
-/* line 13, app/sass/modules/_footer.sass */ footer .social-icons li i { font-size: 2em; }
+/* line 14, app/sass/modules/_footer.sass */ footer .social-icons li i { font-size: 2em; }
 
-/* line 15, app/sass/modules/_footer.sass */ footer .address { margin: 0; padding: 0; list-style-type: none; text-align: center; }
+/* line 16, app/sass/modules/_footer.sass */ footer .address { margin: 0; padding: 0; list-style-type: none; text-align: center; }
 
-/* line 20, app/sass/modules/_footer.sass */ footer .address li { display: block; text-align: center; }
+/* line 21, app/sass/modules/_footer.sass */ footer .address li { display: block; text-align: center; }
 
 /**** Resources ********************/
 /* line 2, app/sass/modules/_resources.sass */ section.main-content { margin-top: 0; padding: 0 0; }
@@ -645,9 +634,6 @@ object {
 
 /* line 18, app/sass/modules/_resources.sass */ .resource:nth-child(3n) { margin-right: 0; }
 
-/* ----------------------------------------
-					Custom Styles Ends
----------------------------------------- */
 /* ----------------------------------------
 					MEDIA QUERIES
 ---------------------------------------- */
